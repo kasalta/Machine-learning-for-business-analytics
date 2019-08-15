@@ -1,22 +1,24 @@
-FROM jupyter/<notebook>:<version hash>
+FROM jupyter/datascience-notebook:2ce7c06a61a1
 
 #Set the working directory
 WORKDIR /home/jovyan/
 
 # Modules
+USER root
 COPY requirements.txt /home/jovyan/requirements.txt
-RUN pip install -r /home/jovyan/requirements.txt
+RUN apt-get update && apt-get -y install graphviz \
+    && pip install -r /home/jovyan/requirements.txt
 
 # Add files
-COPY notebooks /home/jovyan/notebooks
-COPY data /home/jovyan/data
-COPY solutions /home/jovyan/solutions
+COPY notebooks/ /home/jovyan/notebooks
+COPY data/ /home/jovyan/data
+COPY solutions/ /home/jovyan/solutions
+COPY slides/ /home/jovyan/slides
 
 # Allow user to write to directory
-USER root
 RUN chown -R $NB_USER /home/jovyan \
     && chmod -R 774 /home/jovyan \
-    && rm -fR /home/jovyan/work 
+    && rmdir /home/jovyan/work
 USER $NB_USER
 
 # Expose the notebook port

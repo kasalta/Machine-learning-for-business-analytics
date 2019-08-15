@@ -1,4 +1,4 @@
-FROM us.gcr.io/jupyterhub-170614/<series_id>:<single user version>
+FROM us.gcr.io/jupyterhub-170614/0636920295150:v0.3
 
 USER root
 

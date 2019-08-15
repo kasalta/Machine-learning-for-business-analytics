@@ -1,1 +1,8 @@
 ## Please list additional packages with version numbers
+pydotplus
+graphviz
+# The following is specific to O'Reilly's JupyterHub and can be deleted for all other use
+#jupyterhub==0.8.1
+#tornado==4.5.3
+#boto3==1.9.202
+#botocore==1.12.202
