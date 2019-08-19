@@ -1,4 +1,4 @@
-FROM us.gcr.io/jupyterhub-170614/0636920295150:v0.4
+FROM us.gcr.io/jupyterhub-170614/0636920295150:v0.5
 
 USER root
 
