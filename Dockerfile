@@ -10,9 +10,8 @@ RUN apt-get update && apt-get -y install graphviz \
     && pip install -r /home/jovyan/requirements.txt
 
 # Add files
-COPY notebook/ /home/jovyan/notebooks
+COPY notebook/ /home/jovyan/notebook
 COPY data/ /home/jovyan/data
-COPY solutions/ /home/jovyan/solutions
 COPY slides/ /home/jovyan/slides
 COPY postBuild /home/jovyan/postBuild
 
