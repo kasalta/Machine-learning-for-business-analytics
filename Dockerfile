@@ -11,8 +11,8 @@ RUN apt-get update && apt-get -y install graphviz \
 
 # Add files
 COPY notebook/ /home/jovyan/notebook
-COPY data/ /home/jovyan/data
-COPY slides/ /home/jovyan/slides
+COPY Data/ /home/jovyan/Data
+COPY Slides/ /home/jovyan/Slides
 COPY postBuild /home/jovyan/postBuild
 
 # Allow user to write to directory, delete /work, run custom postBuild
