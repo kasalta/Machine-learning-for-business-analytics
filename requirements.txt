@@ -6,4 +6,4 @@ graphviz
 #tornado==4.5.3
 #boto3==1.9.202
 #botocore==1.12.202
-#sidetable==0.7.0
+sidetable==0.7.0
